@@ -96,7 +96,7 @@ const CyberSecurity = () => {
                 >
                     <div className="vinxira-logo">VINXIRA</div>
                     <div className="vinxira-content">
-                        <h3>Analyste SOC <span className="vinxira-badge">EN STAGE Professionnel</span></h3>
+                        <h3>Analyste SOC <span className="vinxira-badge">EN STAGE PROFESSIONNEL</span></h3>
                         <p>
                             Au cœur des opérations de sécurité chez <strong>Vinxira</strong>, je participe activement à la surveillance des infrastructures,
                             à l'analyse des incidents de sécurité et à l'amélioration continue des postures de défense.
