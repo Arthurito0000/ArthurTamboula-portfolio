@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CyberSecurity from './pages/CyberSecurity';
@@ -12,7 +12,7 @@ function App() {
   const { x, y } = useMousePosition();
 
   return (
-    <Router basename="/ArthurTamboula-portfolio">
+    <Router>
       <div className="app-container">
         {/* Curseur interactif en arrière-plan */}
         <motion.div
