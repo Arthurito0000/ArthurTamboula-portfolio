@@ -85,7 +85,6 @@ const Home = () => {
 
     const categories = [
         { id: 'completed', title: 'Projets Réalisés', icon: <CheckCircle2 size={18} /> },
-        { id: 'recent', title: 'Projets Récents', icon: <Clock size={18} /> },
         { id: 'in-progress', title: 'Projets en Cours', icon: <Rocket size={18} /> }
     ];
 
@@ -205,11 +204,14 @@ const Home = () => {
                             {cat.icon}
                             <h3>{cat.title}</h3>
                         </div>
-                        <div className="projects-grid mini">
-                            {projects.filter(p => p.status === cat.id).map((project, index) => (
+                        <div className={`projects-grid mini ${cat.id === 'completed' ? 'full-width' : ''}`}>
+                            {projects.filter(p => {
+                                if (cat.id === 'completed') return p.status === 'completed' || p.status === 'recent';
+                                return p.status === cat.id;
+                            }).map((project, index) => (
                                 <motion.div
                                     key={project.id}
-                                    className="project-card mini"
+                                    className={`project-card mini ${cat.id === 'completed' ? 'row-layout' : ''}`}
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}

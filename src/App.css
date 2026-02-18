@@ -79,6 +79,20 @@ main {
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .navbar {
+    padding: 10px 4%;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
 .nav-actions {
   display: flex;
   align-items: center;
@@ -165,6 +179,35 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 40px 6%;
+}
+
+@media (max-width: 968px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .hero-text {
+    order: 2;
+  }
+
+  .hero-visual {
+    order: 1;
+    margin-bottom: 20px;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
 }
 
 .hello-tag {
@@ -254,6 +297,21 @@ main {
   border-radius: 50%;
   z-index: 2;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .circular-frame {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
 }
 
 /* Tech Bar */
@@ -423,6 +481,47 @@ main {
 @media (max-width: 968px) {
   .projects-grid.mini {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.projects-grid.mini.full-width {
+  grid-template-columns: 1fr;
+}
+
+.project-card.mini.row-layout {
+  display: flex;
+  flex-direction: row;
+  height: auto;
+  min-height: 250px;
+}
+
+.project-card.mini.row-layout .project-image.mini {
+  width: 40%;
+  height: auto;
+  min-height: 250px;
+}
+
+.project-card.mini.row-layout .project-info.mini {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+@media (max-width: 768px) {
+  .project-card.mini.row-layout {
+    flex-direction: column;
+  }
+
+  .project-card.mini.row-layout .project-image.mini,
+  .project-card.mini.row-layout .project-info.mini {
+    width: 100%;
+  }
+
+  .project-card.mini.row-layout .project-image.mini {
+    height: 200px;
+    min-height: auto;
   }
 }
 
@@ -740,7 +839,7 @@ main {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .vinxira-card::before {
     width: 100%;
     height: 4px;
@@ -1336,7 +1435,7 @@ footer {
 @media (max-width: 968px) {
   .hero-container {
     grid-template-columns: 1fr;
-    padding-top: 40px;
+    padding-top: 100px;
   }
 
   .projects-grid {
