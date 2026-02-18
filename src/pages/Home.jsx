@@ -61,7 +61,7 @@ const projects = [
         category: "Productivité & Business",
         status: "recent",
         description: "Outil de management et de suivi de performance pour les équipes modernes. Facilite la collaboration et le suivi des objectifs.",
-        tech: ["React", "Node.js"],
+        tech: ["Laravel 11", "MySQL"],
         image: manageoDash,
         gallery: [manageoLogin, manageoDash, manageoProjects, manageoSuivi, manageoForm, manageoSuppliers]
     },
@@ -128,8 +128,8 @@ const Home = () => {
                         <div className="circular-frame">
                             <div className="circle-bg"></div>
                             <img
-                                src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?auto=format&fit=crop&q=80&w=1000"
-                                alt="Développement Digital"
+                                src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&q=80&w=1000"
+                                alt="Développement Digital Abstract"
                                 className="profile-img"
                             />
                         </div>

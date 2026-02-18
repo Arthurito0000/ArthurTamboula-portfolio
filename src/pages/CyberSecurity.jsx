@@ -71,23 +71,42 @@ const CyberSecurity = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        <div className="terminal-window">
-                            <div className="terminal-header">
-                                <div className="dots"><span></span><span></span><span></span></div>
-                                <div className="title">arthur@soc-terminal ~ </div>
-                            </div>
-                            <div className="terminal-content">
-                                <p><span className="prompt">$</span> analyze --traffic --interface eth0</p>
-                                <p className="typing">Capturing packets...</p>
-                                <p><span className="warning">Warning: Suspicious outbound connection to 45.x.x.x</span></p>
-                                <p><span className="prompt">$</span> whois 45.x.x.x</p>
-                                <p className="success">Origin: Known Malicious C2 Server</p>
-                                <p><span className="danger">Action: Blocking IP and isolating host.</span></p>
-                            </div>
+                        <div className="terminal-window" style={{ border: 'none', background: 'transparent', boxShadow: 'none' }}>
+                            <img
+                                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
+                                alt="SOC Analyst Dashboard"
+                                style={{
+                                    width: '100%',
+                                    borderRadius: '12px',
+                                    boxShadow: '0 20px 50px rgba(16, 185, 129, 0.2)',
+                                    border: '1px solid rgba(16, 185, 129, 0.3)'
+                                }}
+                            />
                         </div>
                     </motion.div>
                 </div>
             </header>
+
+            <section className="vinxira-section">
+                <motion.div
+                    className="vinxira-card"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <div className="vinxira-logo">VINXIRA</div>
+                    <div className="vinxira-content">
+                        <h3>Analyste SOC <span className="vinxira-badge">EN STAGE Professionnel</span></h3>
+                        <p>
+                            Au cœur des opérations de sécurité chez <strong>Vinxira</strong>, je participe activement à la surveillance des infrastructures,
+                            à l'analyse des incidents de sécurité et à l'amélioration continue des postures de défense.
+                        </p>
+                        <div className="terminal-header" style={{ background: 'rgba(0,0,0,0.3)', padding: '10px', borderRadius: '8px', border: '1px solid rgba(255,255,255,0.1)' }}>
+                            <code style={{ color: '#10b981', fontFamily: 'monospace' }}>$ current_status: active_defense_mode</code>
+                        </div>
+                    </div>
+                </motion.div>
+            </section>
 
             <section id="expertise" className="cyber-expertise-section">
                 <div className="section-header">

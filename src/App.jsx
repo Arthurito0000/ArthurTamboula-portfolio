@@ -12,7 +12,7 @@ function App() {
   const { x, y } = useMousePosition();
 
   return (
-    <Router basename="/ArthurTamboula">
+    <Router basename="/ArthurTamboula-portfolio">
       <div className="app-container">
         {/* Curseur interactif en arrière-plan */}
         <motion.div
